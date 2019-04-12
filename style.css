@@ -1,4 +1,10 @@
 body
 {
 background-color:gray;
+ width: 920px;
+  
 }
+.center-container{
+  margin:0 auto;
+}
+  
