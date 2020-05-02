@@ -1,0 +1,21 @@
+img{
+    width: 400px;
+    height: 400px;
+}
+.container{
+    margin-top:100px;
+    width: 600px;
+}
+.dialog-container{
+    width: 400px;
+}
+
+.btn{
+    margin: 0 auto;
+    display: block;
+    background-color: black;
+}
+
+.mystyle{
+    visibility: visible;
+}
