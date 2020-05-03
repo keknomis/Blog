@@ -1,13 +1,16 @@
 img{
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: auto;
 }
 .container{
     margin-top:100px;
     width: 600px;
+    box-shadow: 20px;
 }
 .dialog-container{
-    width: 400px;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
 }
 
 .btn{
@@ -18,4 +21,9 @@ img{
 
 .mystyle{
     visibility: visible;
+}
+
+#tekst{
+    text-align: center;
+    font-size: 2rem;
 }

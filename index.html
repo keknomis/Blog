@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -27,12 +28,15 @@
                 <img src="1.png" usemap="#zoranmap" class=img-fluid>
             </div>
             <div class="row dialog-container border border-dark border-5">
-                <div class="dia1 col col-9">
+                <div class="dia1 col col-12">
                     <p id="tekst">Zdravo moje ime je Zoran</p>
                 </div>
 
-                 <div id="skrito" class="col col-3" style="display:none">
-                    <button type="button" class="btn btn-success" onclick="MapClick()">Nadaljuj</button>
+                 <div id="skrito" class="col col-6" style="display:none">
+                    <button type="button" class="btn btn-success" onclick="MapClick()">Na začetek</button>
+                </div>
+                <div id="skrito2" class="col col-6" style="display:none">
+                   <a href="hotmap.html"><button type="button" class="btn btn-success">Nadaljuj</button></a>
                 </div>
             </div>
         </div>
