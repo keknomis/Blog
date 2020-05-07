@@ -38,7 +38,7 @@ function MapClick() {
 // redirectamo na novo stran
 //Ce najde isti element ga opozorimo da je tega ez nasel
 function HotspotFound(name) {
-    const hotspot =
+ //   const hotspot =
 
     let el=document.getElementById("tekst").innerHTML="Manjka vam še "+hotspots.length+" podrobosti";
 }
