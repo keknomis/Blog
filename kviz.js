@@ -1,3 +1,4 @@
+/* koda za slider slik*/
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -16,6 +17,7 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
 }
 
+/*Ovrednotenje klikov (odgovora)*/
 function odgovor(zastavica){
 if(zastavica==true){
     let el = document.getElementById("tekst").innerHTML = "Odgovor je pravilen";
