@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="resizeImg.css">
+
+    <script>
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+        const hotspots = ['spomenik', 'stojnica', 'slavija'];
+        function HotspotFound(name) {
+            if (hotspots.includes(name)) {
+                hotspots.splice(hotspots.indexOf(name), 1);
+                if (hotspots.length >= 1) {
+                    let el = document.getElementById("tekst").innerHTML = "Bravo odkril/a si vse razlike";
+                    let btn3 = document.getElementById("skrito3");
+                    btn3.style.display = "block";
+                }
+
+                let ul = document.getElementById("najdeneRazlike");
+                let li = document.createElement("li");
+                li.appendChild(document.createTextNode(name));
+                ul.appendChild(li);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1 id="naslov">Poišči razlike</h1>
+        <div class="row dialog-container border border-dark border-5">
+            <div class="row justify-content-md-center">
+            </div>
+            <div class="Img_container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg" style="width:100%" usemap="#razlike">
+                <div id="imgtext"></div>
+            </div>
+        </div>
+        <div class="row text-container border border-dark border-5">
+            <div class="razlike col-6">
+                <div class="column">
+                    <img src="3.PNG"  style="width:100%" onclick="myFunction(this),HotspotFound();">
+                </div>
+                <div class="column">
+                    <img src="2.PNG"style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="6.png" style="width:100%" onclick="myFunction(this);">
+                </div>
+            </div>
+           
+            <p id="tekst">Na novi fotografiji s klikom poišči 3 razlike.
+                Pomagaj si z staro fotografijo in slikarjevo sliko.
+            </p>
+
+            <div class="najdeno col-6">
+                <p>Najdene razlike</p>
+                <ul id="najdeneRazlike">
+                </ul>
+            </div>
+            <div id="skrito3" class="col col-12" style="display:none">
+                <button type="button"><a href="konec.html">Nadaljuj</a></button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <map name="razlike">
+        <!--Spomenik nob-->
+        <area target="" coords="51,286,75" shape="circle" onclick="HotspotFound('spomenik')">
+        <!--Slavija -->
+        <area target="" coords="567,226,47" shape="circle" onclick="HotspotFound('slavija')">
+        <!--Stojnica -->
+        <area target="" coords="537,336,74" shape="circle" onclick="HotspotFound('stojnica')">
+    </map>
+
+</body>
+
+</html>

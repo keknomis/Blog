@@ -29,8 +29,8 @@ function HotspotFound(name,id) {
                 let clearHotspot3=document.getElementById("hotspot3").innerHTML="";
                 let clearh1 = document.getElementById("naslov").innerHTML = "";
 
-                // let btn3 = document.getElementById("skrito3");
-                // btn3.style.display = "block";
+                let btn3 = document.getElementById("skrito3");
+                btn3.style.display = "block";
             }, 1500)
         }
     }
