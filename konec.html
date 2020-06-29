@@ -19,7 +19,9 @@
 
     <script>
         function Click() {
-            let el = document.getElementById("tekst").innerHTML = "Najlepša hvala za družbo in pomoč! Razglej se še kaj po naši galeriji";
+            let el = document.getElementById("tekst").innerHTML = "Najlepša hvala za družbo in pomoč!";
+            var div = document.getElementById("skrito3");
+            div.style.display = "block";
         }
     </script>
     
@@ -29,14 +31,17 @@
 
     <div class="container">
         <div class="row justify-content-md-center">
-            <h1 id="naslov">Pozdravljen</h1>
             <div class="image-container">
                 <img src="1.png" usemap="#zoranmap" class=img-fluid>
             </div>
             <div class="row dialog-container border border-dark border-5">
                 <div class="dia1 col col-12">
                     <p id="tekst">Kako se stvari spremenijo! Izmed vseh sprememb mi je najbolj všeč spomenik, ki sedaj
-                        stoji na koncu partizankse ceste./p>
+                        stoji na koncu partizanske ceste.
+                    </p>
+                </div>
+                <div id="skrito3" class="col col-12" style="display:none">
+                    <a href="#linkdočlanka"><button type="button" class="btn btn-dark btn-block">Pojdi na članek</button></a>
                 </div>
             </div>
         </div>

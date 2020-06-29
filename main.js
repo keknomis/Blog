@@ -17,7 +17,7 @@ function MapClick() {
     //tole bi blo bolse spremenit da se kr pokaze cez sekundo 2
     if (counter == 4) {
         //ponastavimo 
-        let clearh1 = document.getElementById("naslov").innerHTML = "";
+        // let clearh1 = document.getElementById("naslov").innerHTML = "";
         let el = document.getElementById("tekst").innerHTML = "";
         let btn = document.getElementById("skrito");
         let btn2 = document.getElementById("skrito2");
@@ -63,7 +63,7 @@ function MapClick2(){
     counter2++;
 
     if(counter2==1){
-        let el = document.getElementById("tekst").innerHTML = "Hm, me zanima kako ta ulica izgleda danes...Klikni na gumb in poišči podrobnosti";
+        let el = document.getElementById("tekst").innerHTML = "Hm, me zanima kako ta ulica izgleda danes... Klikni na gumb in poišči podrobnosti";
     }  
         //premik v stran Hotmap2
         let showButton=document.getElementById("skrito2").style.display="block";

@@ -14,13 +14,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+   
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="kviz.js"></script>
+    <link rel="stylesheet" href="style.css">
 
     <style>
         .mySlides {
             display: none;
+        }
+        .skrito2{
+            float: ;
         }
     </style>
 </head>
@@ -42,27 +46,22 @@
 
                 <div class="col col-12 d-flex justify-content-center text-center odgovor">
 
-                    <p id="false"><a href="#" onclick="odgovor(false)"> c) Strossmayerjeva uclica</a> </p>
-                    <p id="false"><a href="#" onclick="odgovor(false)"> a) Gosposvetska cesta</a> </p>
-                    <p id="true"><a href="#" onclick="odgovor(true)"> b) Partizanska cesta</a> </p>
+                    <p id="false"><a href="#" onclick="odgovor(false)"> a) Strossmayerjeva uclica</a> </p>
+                    <p id="false"><a href="#" onclick="odgovor(false)"> b) Gosposvetska cesta</a> </p>
+                    <p id="true"><a href="#" onclick="odgovor(true)"> c) Partizanska cesta</a> </p>
                 </div>
 
-                <div class="justify-content-center text-center odgovor">
+                <div class="justify-content-center text-center odgovor col-12">
                     <p id="tekst"></p>
                 </div>
-                <div id="skrito2" class="col col-6" style="display:none">
-                    <a href="Monolog2.html"><button type="button" class="btn btn-success">Nadaljuj</button></a>
+                <div id="skrito2" class="col col-12" style="display:none">
+                    <a href="Monolog2.html"><button type="button" class="btn btn-dark btn-block">Nadaljuj</button></a>
                  </div>
             </div>
         </div>
     </div>
 
-    <map name="mapa">
-        <!-- <area target="" coords="694,166,80" shape="circle" onclick="HotspotFound('stojnica')"> -->
-        <area target="" coords="334,173,109" shape="circle" onclick="HotspotFound('žična napeljava')">
-        <area target="" coords="128,45,77" shape="circle" onclick="HotspotFound('antena')">
-        <area target="" coords="238,415,150" shape="circle" onclick="HotspotFound('skupina ljudi')">
-    </map>
+
 
 
 

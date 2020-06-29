@@ -65,6 +65,20 @@
 #naslov{
     text-align: center;
 }
-.text-container{
+/* .text-container{
     
+} */
+
+#skrito3{
+  margin-bottom: 2%;
+}
+#tekst{
+  text-align: center;
+  font-size: 25px;
+}
+#najdeneRazlike{
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
 }

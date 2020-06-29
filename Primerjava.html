@@ -29,12 +29,11 @@
         function HotspotFound(name) {
             if (hotspots.includes(name)) {
                 hotspots.splice(hotspots.indexOf(name), 1);
-                if (hotspots.length >= 1) {
+                if (hotspots.length ==0) {
                     let el = document.getElementById("tekst").innerHTML = "Bravo odkril/a si vse razlike";
                     let btn3 = document.getElementById("skrito3");
                     btn3.style.display = "block";
                 }
-
                 let ul = document.getElementById("najdeneRazlike");
                 let li = document.createElement("li");
                 li.appendChild(document.createTextNode(name));
@@ -48,9 +47,10 @@
 
 
     <div class="container">
-        <h1 id="naslov">Poišči razlike</h1>
+        <h1 id="naslov">Poišči 3 razlike</h1>
         <div class="row dialog-container border border-dark border-5">
-            <div class="row justify-content-md-center">
+            <!-- <div class="row justify-content-md-center"> -->
+            <div class="row">
             </div>
             <div class="Img_container">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
@@ -59,12 +59,12 @@
             </div>
         </div>
         <div class="row text-container border border-dark border-5">
-            <div class="razlike col-6">
+            <div class="razlike col-12">
                 <div class="column">
-                    <img src="3.PNG"  style="width:100%" onclick="myFunction(this),HotspotFound();">
+                    <img id="fix" src="3.PNG"  style="width:100%;" onclick="myFunction(this)">
                 </div>
                 <div class="column">
-                    <img src="2.PNG"style="width:100%" onclick="myFunction(this);">
+                    <img src="2.PNG" style="width:100%" onclick="myFunction(this);">
                 </div>
                 <div class="column">
                     <img src="6.png" style="width:100%" onclick="myFunction(this);">
@@ -75,13 +75,12 @@
                 Pomagaj si z staro fotografijo in slikarjevo sliko.
             </p>
 
-            <div class="najdeno col-6">
-                <p>Najdene razlike</p>
+            <div class="najdeno col-12">
                 <ul id="najdeneRazlike">
                 </ul>
             </div>
             <div id="skrito3" class="col col-12" style="display:none">
-                <button type="button"><a href="konec.html">Nadaljuj</a></button>
+                <a href="konec.html"><button type="button" class="btn btn-dark btn-block">Nadaljuj</button></a>
             </div>
 
         </div>

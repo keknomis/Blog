@@ -24,7 +24,7 @@ if(zastavica==true){
     setTimeout (function(){
         let btn3 = document.getElementById("skrito2");
         btn3.style.display = "block";
-    },1500)
+    },500)
 }
 else{
     let el = document.getElementById("tekst").innerHTML = "Odgovor je nepravilen";

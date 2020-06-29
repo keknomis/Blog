@@ -20,7 +20,7 @@ function HotspotFound(name,id) {
                 //menjamo sliko
                 $('.img').attr('src', 'zorantrgsvb.png')
                 let el = document.getElementById("tekst")
-                .innerHTML = "Kako zanimovo! Kakšne pa so razlike med preteklo in današnjo podobo te ulice? Brez skrbi,"+
+                .innerHTML = "Kako zanimovo! Kakšne pa so razlike med preteklo in današnjo podobo te ulice? Brez skrbi, "+
                  "spomin si lahko osvežiš v spodnjem desnem kotu, kjer sta sličici moje slike Ulica in pa fotografija aleksandrove ceste nekoč. "+
                  "S klikom nanju ju povečaš.";
 
