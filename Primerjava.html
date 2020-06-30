@@ -30,9 +30,12 @@
             if (hotspots.includes(name)) {
                 hotspots.splice(hotspots.indexOf(name), 1);
                 if (hotspots.length ==0) {
-                    let el = document.getElementById("tekst").innerHTML = "Bravo odkril/a si vse razlike";
+                    let el = document.getElementById("tekst").innerHTML = "";
                     let btn3 = document.getElementById("skrito3");
                     btn3.style.display = "block";
+
+                    let el2 = document.getElementById("tekst2").innerHTML = "Bravo! Odkril/a si vse razlike!";
+
                 }
                 let ul = document.getElementById("najdeneRazlike");
                 let li = document.createElement("li");
@@ -48,10 +51,8 @@
 
     <div class="container">
         <h1 id="naslov">Poišči 3 razlike</h1>
+        <p class="hint"><b>Namigi:</b> NOB, stojnica, fitnes center </p>
         <div class="row dialog-container border border-dark border-5">
-            <!-- <div class="row justify-content-md-center"> -->
-            <div class="row">
-            </div>
             <div class="Img_container">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                 <img id="expandedImg" style="width:100%" usemap="#razlike">
@@ -59,25 +60,28 @@
             </div>
         </div>
         <div class="row text-container border border-dark border-5">
-            <div class="razlike col-12">
-                <div class="column">
-                    <img id="fix" src="3.PNG"  style="width:100%;" onclick="myFunction(this)">
+            <div class="razlike">
+                <div class="column col-4">
+                    <img id="fix" src="resize.png" style="width:100%;" onclick="myFunction(this)">
                 </div>
-                <div class="column">
+                <div class="column col-4">
                     <img src="2.PNG" style="width:100%" onclick="myFunction(this);">
                 </div>
-                <div class="column">
+                <div class="column col-4">
                     <img src="6.png" style="width:100%" onclick="myFunction(this);">
                 </div>
             </div>
            
-            <p id="tekst">Na novi fotografiji s klikom poišči 3 razlike.
+            <p id="tekst" style="text-align: center;">Na novi fotografiji s klikom poišči 3 razlike.
                 Pomagaj si z staro fotografijo in slikarjevo sliko.
             </p>
 
             <div class="najdeno col-12">
                 <ul id="najdeneRazlike">
                 </ul>
+
+                <p id="tekst2" style="text-align: center;"> 
+                </p>
             </div>
             <div id="skrito3" class="col col-12" style="display:none">
                 <a href="konec.html"><button type="button" class="btn btn-dark btn-block">Nadaljuj</button></a>
